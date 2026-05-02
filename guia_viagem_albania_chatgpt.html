@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guia para a viagem com ajuda do ChatGPT e outras ferramentas</title>
+<style>
+:root{
+  --orange:#f97316;
+  --orange-dark:#c2410c;
+  --orange-soft:#fff7ed;
+  --ink:#151515;
+  --muted:#626262;
+  --line:#eadfd6;
+  --card:#ffffff;
+  --bg:#fffaf5;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;line-height:1.55;font-size:16px}
+a{color:var(--orange-dark);text-decoration:none;border-bottom:1px solid rgba(194,65,12,.25)}
+a:hover{border-bottom-color:var(--orange-dark)}
+.hero{background:linear-gradient(135deg,#171717 0%,#2b1b12 56%,#431407 100%);color:white;padding:58px 34px 46px;border-bottom:8px solid var(--orange)}
+.hero-inner{max-width:1080px;margin:0 auto}.eyebrow{display:inline-flex;gap:8px;align-items:center;background:rgba(249,115,22,.14);border:1px solid rgba(249,115,22,.35);color:#fed7aa;border-radius:999px;padding:7px 12px;font-size:13px;font-weight:700;letter-spacing:.02em;text-transform:uppercase}.hero h1{font-size:48px;line-height:1.05;margin:22px 0 14px;letter-spacing:-.035em;max-width:900px}.hero p{font-size:18px;color:#f6e7dc;max-width:850px;margin:0}.meta-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:30px}.meta{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);padding:14px 16px;border-radius:18px}.meta strong{display:block;font-size:13px;color:#fed7aa;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px}.meta span{font-size:16px;color:white}
+.wrapper{max-width:1080px;margin:0 auto;padding:32px}.toc{background:white;border:1px solid var(--line);border-radius:24px;padding:22px;margin-top:-58px;box-shadow:0 18px 50px rgba(67,20,7,.16)}.toc h2{margin:0 0 12px;font-size:20px}.toc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.toc a{display:block;border:1px solid var(--line);border-radius:14px;padding:10px 12px;background:#fffaf5;font-weight:650;color:#7c2d12}.section{margin:38px 0}.section h2{font-size:32px;letter-spacing:-.03em;margin:0 0 12px;border-left:6px solid var(--orange);padding-left:14px}.section h3{font-size:21px;margin:26px 0 10px}.lead{color:#404040;font-size:18px;max-width:900px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.grid.two{grid-template-columns:repeat(2,1fr)}.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:0 10px 30px rgba(124,45,18,.07)}.card h3{margin-top:0}.pill{display:inline-flex;align-items:center;gap:7px;background:var(--orange-soft);border:1px solid #fed7aa;color:#9a3412;border-radius:999px;padding:6px 10px;font-size:13px;font-weight:700;margin:0 6px 8px 0}.hotel-title{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;margin-bottom:12px}.hotel-title h3{margin:0}.price{font-size:24px;font-weight:850;color:var(--orange-dark)}.small{color:var(--muted);font-size:14px}.facts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}.fact{border:1px solid var(--line);border-radius:14px;padding:10px;background:#fffdfb}.fact strong{display:block;color:#7c2d12;font-size:12px;text-transform:uppercase;letter-spacing:.04em}.fact span{font-weight:650}.timeline{position:relative;margin-top:18px}.day{display:grid;grid-template-columns:150px 1fr;gap:18px;margin:0 0 18px}.date{background:#171717;color:white;border-radius:18px;padding:16px;align-self:start;position:sticky;top:12px}.date strong{display:block;color:#fdba74;font-size:13px;text-transform:uppercase;letter-spacing:.05em}.date span{font-size:22px;font-weight:850}.day-card{background:white;border:1px solid var(--line);border-radius:22px;padding:20px}.day-card h3{margin:0 0 10px}.tag-row{margin:8px 0 12px}.note{background:#fff7ed;border:1px solid #fed7aa;border-left:6px solid var(--orange);border-radius:18px;padding:16px;margin:18px 0}.warning{background:#fff1f2;border-color:#fecdd3;border-left-color:#f43f5e}.table-wrap{overflow-x:auto;background:white;border:1px solid var(--line);border-radius:20px}table{border-collapse:collapse;width:100%;min-width:720px}th,td{padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}th{background:#fff7ed;color:#7c2d12;font-size:13px;text-transform:uppercase;letter-spacing:.05em}tr:last-child td{border-bottom:none}.checklist{columns:2;column-gap:28px}.checklist li{break-inside:avoid;margin:0 0 8px}.footer{margin-top:48px;padding:26px;border-radius:24px;background:#171717;color:#f6e7dc}.footer strong{color:#fdba74}.print-note{font-size:13px;color:#7a7a7a;margin-top:14px}
+@media(max-width:900px){.hero h1{font-size:36px}.meta-strip,.grid,.grid.two,.toc-grid{grid-template-columns:1fr}.day{grid-template-columns:1fr}.date{position:relative;top:auto}.wrapper{padding:22px}.toc{margin-top:-42px}.checklist{columns:1}}
+@media print{body{background:white;font-size:12.5px}.hero{padding:36px 28px 28px}.hero h1{font-size:34px}.wrapper{padding:20px}.toc{margin-top:0;box-shadow:none}.section{page-break-inside:auto;margin:25px 0}.card,.day-card,.note,.table-wrap{box-shadow:none;page-break-inside:avoid}.grid,.grid.two{display:block}.grid .card{margin:0 0 14px}.toc-grid{gap:10px}.day{page-break-inside:avoid;grid-template-columns:110px 1fr}.date{position:relative;top:auto}.facts{grid-template-columns:1fr 1fr}.hotel-title h3{font-size:18px}.price{font-size:19px}a{border:none;color:#7c2d12}.footer{page-break-inside:avoid}.pagebreak{break-before:page}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Albânia, 8 a 15 de agosto</div>
+    <h1>Guia para a viagem com ajuda do ChatGPT e outras ferramentas</h1>
+    <p>Roteiro prático para quatro adultos, com entrada e saída por Tirana, foco no sul da Albânia, hotéis já reservados com cancelamento gratuito, e uma abordagem pensada para evitar excesso de cansaço.</p>
+    <div class="meta-strip">
+      <div class="meta"><strong>Grupo</strong><span>4 adultos</span></div>
+      <div class="meta"><strong>Base principal</strong><span>Sarandë</span></div>
+      <div class="meta"><strong>Ritmo</strong><span>Confortável e flexível</span></div>
+      <div class="meta"><strong>Foco</strong><span>Praia, natureza e património</span></div>
+    </div>
+  </div>
+</header>
+<main class="wrapper">
+  <nav class="toc" id="topo">
+    <h2>Índice rápido</h2>
+    <div class="toc-grid">
+      <a href="#voos">1. Voos</a>
+      <a href="#bookings">2. Hotéis reservados</a>
+      <a href="#filosofia">3. Filosofia da viagem</a>
+      <a href="#roteiro">4. Roteiro dia a dia</a>
+      <a href="#transportes">5. Transportes</a>
+      <a href="#atividades">6. Atividades e tours</a>
+      <a href="#checklist">7. Checklist</a>
+      <a href="#orcamento">8. Custos base</a>
+      <a href="#conclusao">9. Conclusão</a>
+    </div>
+  </nav>
+
+  <section class="section" id="voos">
+    <h2>1. Voos</h2>
+    <div class="grid two">
+      <div class="card">
+        <span class="pill">Ida</span>
+        <h3>Lisboa, Tirana</h3>
+        <div class="facts">
+          <div class="fact"><strong>Data</strong><span>Sábado, 8 agosto</span></div>
+          <div class="fact"><strong>Voo</strong><span>EJU7677</span></div>
+          <div class="fact"><strong>Partida</strong><span>Lisboa, 13:55</span></div>
+          <div class="fact"><strong>Chegada</strong><span>Tirana, 18:30</span></div>
+          <div class="fact"><strong>Duração</strong><span>3h35</span></div>
+          <div class="fact"><strong>Nota</strong><span>Dormir junto ao aeroporto</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <span class="pill">Regresso</span>
+        <h3>Tirana, Lisboa</h3>
+        <div class="facts">
+          <div class="fact"><strong>Data</strong><span>Sábado, 15 agosto</span></div>
+          <div class="fact"><strong>Voo</strong><span>EJU7678</span></div>
+          <div class="fact"><strong>Partida</strong><span>Tirana, 20:35</span></div>
+          <div class="fact"><strong>Chegada</strong><span>Lisboa, 23:30</span></div>
+          <div class="fact"><strong>Duração</strong><span>3h55</span></div>
+          <div class="fact"><strong>Nota</strong><span>Transfer cedo desde Sarandë</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="note">Como a chegada a Tirana é às 18:30, não compensa descer logo para o sul. No regresso, como o voo é às 20:35, é possível sair de Sarandë de manhã e ir diretamente para o aeroporto, desde que seja usado um transfer privado com margem confortável.</div>
+  </section>
+
+  <section class="section pagebreak" id="bookings">
+    <h2>2. Hotéis reservados</h2>
+    <p class="lead">As reservas abaixo foram extraídas das confirmações Booking.com carregadas para este guia. Todas têm cancelamento gratuito até à data indicada e pagamento tratado pelo alojamento. Os documentos originais de confirmação devem ser guardados em separado, sobretudo por conterem dados de acesso à reserva.</p>
+    <div class="grid">
+      <article class="card">
+        <div class="hotel-title"><h3>Aerostay Hotel</h3><div class="price">€72</div></div>
+        <p><strong>Função no roteiro:</strong> primeira noite, perto do aeroporto de Tirana.</p>
+        <div class="facts">
+          <div class="fact"><strong>Estadia</strong><span>8 a 9 agosto</span></div>
+          <div class="fact"><strong>Local</strong><span>Rinas</span></div>
+          <div class="fact"><strong>Quarto</strong><span>Family Room</span></div>
+          <div class="fact"><strong>Grupo</strong><span>4 adultos</span></div>
+          <div class="fact"><strong>Refeições</strong><span>Não incluídas</span></div>
+          <div class="fact"><strong>Cancelamento</strong><span>Grátis até 8 agosto, 18:00</span></div>
+        </div>
+        <p class="small"><strong>Morada:</strong> Rruga e Aeroportit Hotel Aerostay, 1000 Rinas, Albania<br><strong>Telefone:</strong> +355 68 819 2835<br><strong>Comodidades relevantes:</strong> ar condicionado, casa de banho privativa, terraço, frigorífico, chaleira elétrica, Wi-Fi gratuito nos quartos, estacionamento privado gratuito no local.</p>
+        <p class="small"><strong>Confirmação:</strong> 6856.020.889. O PIN fica apenas na confirmação original.</p>
+      </article>
+
+      <article class="card">
+        <div class="hotel-title"><h3>Palorto Inn</h3><div class="price">€126,68</div></div>
+        <p><strong>Função no roteiro:</strong> noite histórica em Gjirokastër, no caminho para Sarandë.</p>
+        <div class="facts">
+          <div class="fact"><strong>Estadia</strong><span>9 a 10 agosto</span></div>
+          <div class="fact"><strong>Local</strong><span>Gjirokastër</span></div>
+          <div class="fact"><strong>Quarto</strong><span>Deluxe Family Room</span></div>
+          <div class="fact"><strong>Grupo</strong><span>4 adultos</span></div>
+          <div class="fact"><strong>Refeições</strong><span>Pequeno-almoço incluído</span></div>
+          <div class="fact"><strong>Cancelamento</strong><span>Grátis até 5 agosto, 23:59</span></div>
+        </div>
+        <p class="small"><strong>Morada:</strong> Rruga Hysen Hoxha 11, 6001 Gjirokastër, Albania<br><strong>Telefone:</strong> +355 69 207 8027<br><strong>Comodidades relevantes:</strong> ar condicionado, casa de banho privativa, banheira, insonorização, minibar, máquina de café, Wi-Fi gratuito em todas as áreas, estacionamento privado gratuito.</p>
+        <p class="small"><strong>Confirmação:</strong> 5050.747.215. O PIN fica apenas na confirmação original.</p>
+      </article>
+
+      <article class="card">
+        <div class="hotel-title"><h3>Ostria Hotel</h3><div class="price">€550</div></div>
+        <p><strong>Função no roteiro:</strong> base principal em Sarandë para praia, Butrint, Ksamil, Borsh e barco.</p>
+        <div class="facts">
+          <div class="fact"><strong>Estadia</strong><span>10 a 15 agosto</span></div>
+          <div class="fact"><strong>Local</strong><span>Sarandë</span></div>
+          <div class="fact"><strong>Unidade</strong><span>Apartamento, rés-do-chão</span></div>
+          <div class="fact"><strong>Grupo</strong><span>4 adultos</span></div>
+          <div class="fact"><strong>Refeições</strong><span>Pequeno-almoço incluído</span></div>
+          <div class="fact"><strong>Cancelamento</strong><span>Grátis até 2 agosto, 23:59</span></div>
+        </div>
+        <p class="small"><strong>Morada:</strong> Rruga Skenderbeu, n/h/n, 9701 Sarandë, Albania<br><strong>Telefone:</strong> +355 69 639 6907<br><strong>Comodidades relevantes:</strong> ar condicionado, varanda, kitchenette, frigorífico, chaleira elétrica, entrada privada, Wi-Fi gratuito em todas as áreas, estacionamento privado gratuito nas proximidades.</p>
+        <p class="small"><strong>Confirmação:</strong> 6068.782.321. O PIN fica apenas na confirmação original.</p>
+      </article>
+    </div>
+    <div class="note warning"><strong>Nota de privacidade:</strong> este guia não replica os PINs das reservas. Para check-in, alterações ou cancelamento, usar os PDFs originais da Booking.com ou a área “Your bookings” na aplicação.</div>
+  </section>
+
+  <section class="section" id="filosofia">
+    <h2>3. Filosofia da viagem</h2>
+    <p class="lead">O roteiro evita a tentação de “ver tudo”. A prioridade é construir uma viagem confortável, bonita e com bons momentos de descanso, especialmente por ser agosto e por a viagem ser feita com os pais.</p>
+    <div class="grid two">
+      <div class="card"><h3>O que este plano privilegia</h3><ul><li>Poucas mudanças de alojamento.</li><li>Sarandë como base principal.</li><li>Blue Eye no caminho certo, entre Gjirokastër e Sarandë.</li><li>Butrint e Ksamil num dia organizado.</li><li>Um dia totalmente flexível antes do regresso.</li><li>Transfers privados nos pontos em que reduzem cansaço.</li></ul></div>
+      <div class="card"><h3>O que este plano evita</h3><ul><li>Descer para o sul na noite da chegada.</li><li>Fazer muitas cidades e praias com malas.</li><li>Passar demasiado tempo em Tirana.</li><li>Dependência excessiva de furgons em dias críticos.</li><li>Regresso ao aeroporto com transporte imprevisível.</li><li>Tours demasiado longos, com 12 a 16 horas.</li></ul></div>
+    </div>
+  </section>
+
+  <section class="section pagebreak" id="roteiro">
+    <h2>4. Roteiro dia a dia</h2>
+    <div class="timeline">
+      <div class="day"><div class="date"><strong>Sábado</strong><span>8 agosto</span></div><div class="day-card"><h3>Chegada a Tirana, dormir em Rinas</h3><div class="tag-row"><span class="pill">Voo</span><span class="pill">Noite funcional</span><span class="pill">Aerostay Hotel</span></div><p>Chegada a Tirana às 18:30. A opção mais confortável é seguir diretamente para o Aerostay Hotel, perto do aeroporto, jantar de forma simples e descansar. Não vale a pena iniciar a descida para o sul nesta noite.</p><p><strong>Alojamento:</strong> Aerostay Hotel, Family Room, 4 adultos, €72.</p></div></div>
+      <div class="day"><div class="date"><strong>Domingo</strong><span>9 agosto</span></div><div class="day-card"><h3>Rinas, Gjirokastër</h3><div class="tag-row"><span class="pill">Estrada</span><span class="pill">Cidade histórica</span><span class="pill">Palorto Inn</span></div><p>Sair de manhã em direção a Gjirokastër. A cidade encaixa bem no caminho para o sul, é mais lógica do que Berat para esta viagem e permite uma noite cultural sem grande desvio.</p><p>À chegada, fazer check-in, passear pelo bazar antigo, visitar o castelo se houver energia, e jantar na zona histórica. Como Gjirokastër é inclinada, convém usar táxi se estiverem com malas.</p><p><strong>Alojamento:</strong> Palorto Inn, Deluxe Family Room, pequeno-almoço incluído, €126,68.</p></div></div>
+      <div class="day"><div class="date"><strong>Segunda</strong><span>10 agosto</span></div><div class="day-card"><h3>Gjirokastër, Blue Eye, Sarandë</h3><div class="tag-row"><span class="pill">Natureza</span><span class="pill">Transfer recomendado</span><span class="pill">Ostria Hotel</span></div><p>Manhã leve em Gjirokastër, se ainda houver algo por ver. Depois, transfer privado ou táxi para Sarandë com paragem no Blue Eye. Esta é a forma mais eficiente de visitar o Blue Eye, porque fica no eixo Gjirokastër, Sarandë.</p><p>Chegada a Sarandë, check-in no Ostria Hotel, passeio na marginal e jantar junto ao mar.</p><p><strong>Alojamento:</strong> Ostria Hotel, apartamento no rés-do-chão, pequeno-almoço incluído, €550 por 5 noites.</p></div></div>
+      <div class="day"><div class="date"><strong>Terça</strong><span>11 agosto</span></div><div class="day-card"><h3>Sarandë, dia leve</h3><div class="tag-row"><span class="pill">Descanso</span><span class="pill">Praia</span><span class="pill">Marginal</span></div><p>Dia sem programa rígido. Praia em Sarandë ou nas proximidades, almoço descontraído, descanso à tarde e passeio ao fim do dia. Se houver vontade, subir ao Castelo de Lëkurësi para vista sobre Sarandë.</p><p>Este dia é importante para a viagem não ficar demasiado cheia logo no início.</p></div></div>
+      <div class="day"><div class="date"><strong>Quarta</strong><span>12 agosto</span></div><div class="day-card"><h3>Butrint e Ksamil</h3><div class="tag-row"><span class="pill">Património</span><span class="pill">Praia</span><span class="pill">Sair cedo</span></div><p>Fazer Butrint de manhã cedo, antes do calor mais forte. Depois seguir para Ksamil para almoço e praia. Em agosto, Ksamil estará cheio, por isso é melhor ir com expectativas realistas e, se necessário, reservar espreguiçadeiras.</p><p>Recomendação prática, usar driver, tour local ou táxi combinado para controlar horários e reduzir desgaste.</p></div></div>
+      <div class="day"><div class="date"><strong>Quinta</strong><span>13 agosto</span></div><div class="day-card"><h3>Borsh Beach ou passeio de barco</h3><div class="tag-row"><span class="pill">Escolha flexível</span><span class="pill">Praia</span><span class="pill">Mar</span></div><p>Escolher uma das duas opções, não as duas no mesmo dia. Borsh Beach é melhor para uma praia longa, aberta e mais previsível. Um passeio de barco a partir de Sarandë pode ser mais memorável, especialmente se incluir enseadas e praias acessíveis por mar.</p><p>Se os pais preferirem estabilidade e menos movimento, escolher Borsh. Se gostarem de mar e o tempo estiver bom, escolher barco.</p></div></div>
+      <div class="day"><div class="date"><strong>Sexta</strong><span>14 agosto</span></div><div class="day-card"><h3>Dia livre em Sarandë</h3><div class="tag-row"><span class="pill">Flexível</span><span class="pill">Descanso</span><span class="pill">Último jantar</span></div><p>Dia sem obrigações. Pode servir para repetir uma praia, fazer compras, passear, recuperar energia ou compensar algum plano que tenha ficado por fazer. Ideal para jantar final com vista ou numa zona agradável da marginal.</p></div></div>
+      <div class="day"><div class="date"><strong>Sábado</strong><span>15 agosto</span></div><div class="day-card"><h3>Sarandë, aeroporto de Tirana, Lisboa</h3><div class="tag-row"><span class="pill">Regresso</span><span class="pill">Transfer privado</span><span class="pill">Voo 20:35</span></div><p>Sair de Sarandë cedo, idealmente entre 08:30 e 09:00. Para este dia, o transfer privado é a opção mais segura. O autocarro é mais barato, mas não compensa o risco antes de um voo internacional.</p><p>Chegada ao aeroporto com margem, voo Tirana, Lisboa às 20:35.</p></div></div>
+    </div>
+  </section>
+
+  <section class="section" id="transportes">
+    <h2>5. Transportes</h2>
+    <div class="table-wrap"><table><thead><tr><th>Trajeto</th><th>Opção recomendada</th><th>Razão</th></tr></thead><tbody>
+      <tr><td>Aeroporto de Tirana, Aerostay Hotel</td><td>Transfer curto ou táxi</td><td>Chegada ao fim do dia, deslocação simples e sem turismo.</td></tr>
+      <tr><td>Rinas/Tirana, Gjirokastër</td><td>Autocarro ou transfer</td><td>Autocarro é viável se quiserem poupar. Transfer é mais confortável.</td></tr>
+      <tr><td>Gjirokastër, Blue Eye, Sarandë</td><td>Transfer privado</td><td>Há malas, calor e paragem turística. O conforto compensa.</td></tr>
+      <tr><td>Sarandë, Butrint, Ksamil</td><td>Driver, tour local ou táxi combinado</td><td>Permite sair cedo, controlar horários e regressar sem stress.</td></tr>
+      <tr><td>Sarandë, Borsh</td><td>Driver ou transfer</td><td>Praia mais distante e transporte público menos conveniente.</td></tr>
+      <tr><td>Sarandë, aeroporto de Tirana</td><td>Transfer privado</td><td>Dia de voo, convém evitar risco logístico.</td></tr>
+    </tbody></table></div>
+    <div class="note">Na Albânia, autocarros e furgons funcionam nas rotas principais, mas podem ter horários menos rígidos. Para uma viagem familiar em agosto, os transfers privados devem ser usados nos momentos em que reduzem claramente cansaço ou risco.</div>
+  </section>
+
+  <section class="section" id="atividades">
+    <h2>6. Atividades e tours</h2>
+    <div class="grid two">
+      <div class="card"><h3>Atividades que fazem sentido</h3><ul><li>Tour local ou driver para Butrint e Ksamil.</li><li>Transfer com paragem no Blue Eye.</li><li>Passeio de barco a partir de Sarandë, se o mar estiver bom.</li><li>Driver para Borsh Beach, se quiserem uma praia mais espaçosa.</li><li>Jantar ou pôr do sol no Castelo de Lëkurësi.</li></ul></div>
+      <div class="card"><h3>Atividades a evitar</h3><ul><li>Tours de 12 a 16 horas.</li><li>Tours que juntam demasiados locais no mesmo dia.</li><li>Excursões desde Tirana até Ksamil ou Sarandë e regresso no mesmo dia.</li><li>Deslocações longas depois do jantar.</li><li>Programas que não deixem margem para calor, trânsito e descanso.</li></ul></div>
+    </div>
+  </section>
+
+  <section class="section" id="checklist">
+    <h2>7. Checklist prático</h2>
+    <ul class="checklist">
+      <li>Guardar os PDFs originais das reservas Booking.com.</li>
+      <li>Confirmar com os hotéis a hora prevista de chegada.</li>
+      <li>Confirmar se o Aerostay permite check-in sem problema após chegada do voo.</li>
+      <li>Confirmar transfer Gjirokastër, Blue Eye, Sarandë.</li>
+      <li>Confirmar transfer Sarandë, aeroporto de Tirana para 15 de agosto.</li>
+      <li>Levar algum numerário em euros e levantar lek quando necessário.</li>
+      <li>Levar calçado confortável para Gjirokastër e Butrint.</li>
+      <li>Levar chapéu, protetor solar e água para os dias de visita.</li>
+      <li>Não marcar tours muito longos nos dias seguidos à chegada.</li>
+      <li>Deixar o dia 14 de agosto livre.</li>
+      <li>Confirmar se os operadores aceitam cartão ou apenas numerário.</li>
+      <li>Verificar condições de cancelamento antes dos prazos de agosto.</li>
+    </ul>
+  </section>
+
+  <section class="section" id="orcamento">
+    <h2>8. Custos base já reservados</h2>
+    <div class="table-wrap"><table><thead><tr><th>Item</th><th>Datas</th><th>Valor</th><th>Notas</th></tr></thead><tbody>
+      <tr><td>Aerostay Hotel</td><td>8 a 9 agosto</td><td>€72</td><td>1 quarto familiar, 4 adultos, sem pequeno-almoço.</td></tr>
+      <tr><td>Palorto Inn</td><td>9 a 10 agosto</td><td>€126,68</td><td>1 quarto familiar, 4 adultos, pequeno-almoço incluído.</td></tr>
+      <tr><td>Ostria Hotel</td><td>10 a 15 agosto</td><td>€550</td><td>1 apartamento, 4 adultos, pequeno-almoço incluído.</td></tr>
+      <tr><td><strong>Total alojamento reservado</strong></td><td>7 noites</td><td><strong>€748,68</strong></td><td>Valor total indicado nas confirmações, sem extras.</td></tr>
+    </tbody></table></div>
+    <p class="print-note">Transportes, refeições, tours, entradas, taxas adicionais e eventuais extras não estão incluídos neste total.</p>
+  </section>
+
+  <section class="section" id="conclusao">
+    <h2>9. Conclusão</h2>
+    <p class="lead">A estrutura final, Rinas, Gjirokastër e Sarandë, é uma boa solução para esta viagem. Evita desperdiçar tempo em Tirana, encaixa uma cidade histórica no caminho, coloca o Blue Eye no ponto mais lógico da rota e permite usar Sarandë como base para os dias de praia e atividades.</p>
+    <div class="footer"><strong>Resumo:</strong> uma noite funcional junto ao aeroporto, uma noite cultural em Gjirokastër, cinco noites em Sarandë, transfers privados nos momentos críticos e dias com margem para descanso. O resultado deve ser uma viagem mais confortável do que um roteiro clássico cheio de mudanças de hotel.</div>
+  </section>
+</main>
+</body>
+</html>
